@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <title>All Products</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/products">제품 검색하기</a></h1>
+        </div>
+
+        <div class="page-header">
+            <h1><a href="{% url 'product_detail' 3 %}">제품 검색하기</a></h1>
+        </div>
+
+        <!--
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for product in products %}
+                        <div>
+                            <h1> 상품 Id : {{product.id}} </h1>
+                            <p> 상품 이미지 ID : {{product.imageId}}</p>
+                            <p> 상품명 : {{product.name}}</p>
+                            <p> 가격 : {{product.price}}</p>
+                            <p> 성별 : {{product.gender}}</p>
+                            <p> 카테고리 : {{product.category}}</p>
+                            <p> 구성 성분 이름 : {{product.ingredients}}</p>
+                            <p> 이번 달 판매 수량 : {{product.monthlySales}}</p>
+                        </div>
+
+
+                    {% endfor %}
+
+
+
+
+                </div>
+            </div>
+        </div>
+        -->
+
+</body>
+</html>

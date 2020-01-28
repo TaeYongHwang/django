@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <title>All Products</title>
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">All Products</a></h1>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% for ingredient in ingredients %}
+                        <div>
+                            <h1> 성분 이름 : {{ingredient.name}} </h1>
+                            <p> 지성 영향 : {{ingredient.oily}}</p>
+                            <p> 건성 영향 : {{ingredient.dry}}</p>
+                            <p> 민감성 영향 : {{ingredient.sensitive}}</p>
+                        </div>
+
+                    {% endfor %}
+
+
+
+
+                </div>
+            </div>
+        </div>
+</body>
+</html>

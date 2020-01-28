@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="#" method="get">
+        {{ form|linebreaks }}
+        <input type="submit" value="submit" name="submit">
+    </form>
+    <p>{{fitness}}</p>
+
+   <div>
+
+        <div>
+            {% for product in fitness %}
+            {% for row in product %}
+            <h1> 상품 Id : {{row.id}} </h1>
+            {% endfor %}
+            {% endfor %}
+        </div>
+
+    </div>
+
+
+
+    <div>
+        {% for product in products %}
+        <div>
+            <h1> <a href="{% url 'product_detail' product.id %}">상품 Id : {{product.id}} </a></h1>
+            <p> 상품 이미지 ID : {{product.imageId}}</p>
+            <p> 상품명 : {{product.name}}</p>
+            <p> 가격 : {{product.price}}</p>
+            <p> 성별 : {{product.gender}}</p>
+            <p> 카테고리 : {{product.category}}</p>
+            <p> 구성 성분 이름 : {{product.ingredients}}</p>
+            <p> 이번 달 판매 수량 : {{product.monthlySales}}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
